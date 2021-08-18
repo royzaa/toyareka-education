@@ -34,7 +34,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Galor Education',
+        title: 'Toyareka Education',
         theme: ThemeData(
           primarySwatch: Colors.grey,
           fontFamily: 'Poppins',
