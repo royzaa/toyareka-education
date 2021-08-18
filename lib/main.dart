@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import './configure_nonweb.dart' if (dart.library.html) './configure_web.dart';
 
 import './services/sheets_api.dart';
 import './models/article.dart';
 import './interface/screens/home/home.dart';
 
 void main() async {
+  configureApp();
   WidgetsFlutterBinding.ensureInitialized();
   await SheetApi.init();
   runApp(const MyApp());
