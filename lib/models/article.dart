@@ -31,8 +31,8 @@ class Article {
       this.programType});
 
   static Article fromJson(Map<String, dynamic> json) => Article(
-        linkYt: json['Link youtube'] ?? 'null',
-        time: json['Tanggal'] ?? 'no date',
+        linkYt: json['Link youtube (jika ada)'] ?? 'null',
+        time: json['Tanggal dibuat'] ?? 'no date',
         imageUrl: json['Gambar'] ?? 'image not found',
         title: json['Judul'] ?? 'title not found',
         tags: json['Tags'] ?? 'tags not found',

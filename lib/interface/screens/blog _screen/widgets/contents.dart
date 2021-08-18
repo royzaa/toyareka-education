@@ -30,61 +30,61 @@ class Contents extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // String getPostDate() {
-    //   print('time:' + timeStamp);
-    //   String? postDate;
+    String getPostDate() {
+      debugPrint('time:' + timeStamp);
+      String? postDate;
 
-    //   var splitByTimeUnit = timeStamp.split('/');
+      var splitByTimeUnit = timeStamp.split('/');
 
-    //   int monthInNumber = int.parse(splitByTimeUnit[1]);
+      int monthInNumber = int.parse(splitByTimeUnit[1]);
 
-    //   String month = '';
+      String month = '';
 
-    //   switch (monthInNumber) {
-    //     case 1:
-    //       month = 'Januari';
-    //       break;
-    //     case 2:
-    //       month = 'Februari';
-    //       break;
-    //     case 3:
-    //       month = 'Maret';
-    //       break;
-    //     case 4:
-    //       month = 'April';
-    //       break;
-    //     case 5:
-    //       month = 'Mei';
-    //       break;
-    //     case 6:
-    //       month = 'Juni';
-    //       break;
-    //     case 7:
-    //       month = 'Juli';
-    //       break;
-    //     case 8:
-    //       month = 'Agustus';
-    //       break;
-    //     case 9:
-    //       month = 'September';
-    //       break;
-    //     case 10:
-    //       month = 'Oktober';
-    //       break;
-    //     case 11:
-    //       month = 'November';
-    //       break;
-    //     case 12:
-    //       month = 'Desember';
-    //       break;
-    //     default:
-    //       month = 'Desember';
-    //   }
+      switch (monthInNumber) {
+        case 1:
+          month = 'Januari';
+          break;
+        case 2:
+          month = 'Februari';
+          break;
+        case 3:
+          month = 'Maret';
+          break;
+        case 4:
+          month = 'April';
+          break;
+        case 5:
+          month = 'Mei';
+          break;
+        case 6:
+          month = 'Juni';
+          break;
+        case 7:
+          month = 'Juli';
+          break;
+        case 8:
+          month = 'Agustus';
+          break;
+        case 9:
+          month = 'September';
+          break;
+        case 10:
+          month = 'Oktober';
+          break;
+        case 11:
+          month = 'November';
+          break;
+        case 12:
+          month = 'Desember';
+          break;
+        default:
+          month = 'Desember';
+      }
 
-    //   postDate = splitByTimeUnit[0] + month + splitByTimeUnit[2];
-    //   print('post date:' + postDate);
-    //   return postDate;
-    // }
+      postDate = splitByTimeUnit[0] + ' ' + month + ' ' + splitByTimeUnit[2];
+      debugPrint('post date:' + postDate);
+      return postDate;
+    }
 
     return Padding(
       padding: EdgeInsets.symmetric(
@@ -112,8 +112,8 @@ class Contents extends StatelessWidget {
                       ),
                       child: Text(
                         tag,
-                        style: TextStyle(
-                            color: Colors.pink.shade600,
+                        style: const TextStyle(
+                            color: Colors.white,
                             fontFamily: 'Roboto',
                             fontWeight: FontWeight.bold,
                             fontSize: 12),
@@ -137,10 +137,13 @@ class Contents extends StatelessWidget {
             author,
             style: const TextStyle(fontSize: 12, color: Colors.black87),
           ),
-          // Text(
-          //   getPostDate(),
-          //   style: const TextStyle(fontSize: 12, color: Colors.grey),
-          // ),
+          const SizedBox(
+            height: 15,
+          ),
+          Text(
+            getPostDate(),
+            style: const TextStyle(fontSize: 12, color: Colors.grey),
+          ),
           const SizedBox(
             height: 20,
           ),
